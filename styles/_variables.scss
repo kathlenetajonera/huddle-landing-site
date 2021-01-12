@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+//font-family
+$heading-font: "Poppins", sans-serif;
+$body-font: "Open Sans", sans-serif;
+
+//colors
+$pink: hsl(322, 100%, 66%);
+$veryPaleCyan: hsl(193, 100%, 96%);
+$veryDarkCyan: hsl(192, 100%, 9%);
+$grayishBlue: hsl(208, 11%, 55%);
+$white: rgb(255, 255, 255);
+
+//font-size
+$font-normal: 1rem;
+$font-md: 18px;

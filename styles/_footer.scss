@@ -1,0 +1,154 @@
+.footer {
+    background-color: $veryDarkCyan;
+    padding: 9rem 1rem 3rem;
+
+    .footer-inner {
+        width: Min(1152px, 100%);
+        margin: 0 auto;
+
+        .logo {
+            display: block;
+    
+            img {
+            filter: brightness(0) invert(1);
+            max-width: 168px;
+            }
+        }
+    
+        .grid-four-col {
+            display: grid;
+
+            @include mediaQuery(tablet) {
+                grid-template-columns: 2fr repeat(3,1fr);
+            }
+    
+            .contact-details {
+                @include mediaQuery(tablet) {
+                    padding-right: 3rem;
+                }
+    
+                .detail {
+                    display: flex;
+                    align-items: flex-start;
+                    margin: 1.5rem 0;
+    
+                    p {
+                        margin-left: 2rem;
+                        color: $white;
+    
+                        @include mediaQuery(tablet) {
+                            font-size: .9rem;
+                        }
+                    }
+    
+                    &.location::before {
+                        content: url("/images/icon-location.svg");
+                    }
+    
+                    &.phone {
+                        &::before {
+                            content: url("/images/icon-phone.svg");
+                        }
+    
+                        p {
+                            margin-left: 1.6rem;
+                        }
+                    }
+    
+                    &.email {
+                        &::before {
+                            content: url("/images/icon-email.svg");
+                        }
+    
+                        p {
+                            margin-left: 1.6rem;
+                        }
+                    }
+                }
+            }
+    
+            .menu {
+                padding: 1rem 0;
+    
+                @include mediaQuery(tablet) {
+                    grid-column: span 2;
+                    display: grid;
+                    grid-template-columns: repeat(2,1fr);
+                }
+    
+                .menu-links {
+                    li {
+                        margin: .8rem 0;
+    
+                        a {
+                            color: $white;
+                            font-weight: 400;
+                            font-size: 1rem;
+    
+                            @include mediaQuery(tablet) {
+                                font-size: .9rem;
+                            }
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .social-media {
+                @include mediaQuery(tablet) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+    
+                .socmed {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 1.5rem 0;
+    
+                    @include mediaQuery(tablet) {
+                        justify-content: flex-start;
+                    }
+    
+                    .icon {
+                        border: 1px solid $white;
+                        border-radius: 50%;
+                        width: 28px;
+                        height: 28px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: .5rem;
+
+                        &:hover {
+                            border:1px solid $pink;
+
+                            i {
+                                color: $pink;
+                            }
+                        }
+    
+                        i {
+                            color: $white;
+                        }
+                    }
+                }
+    
+                p {
+                    color: $white;
+                    font-size: .8rem;
+                    text-align: center;
+    
+                    @include mediaQuery(tablet) {
+                        text-align: left;
+                        font-size: .68rem;
+                    }
+                }
+            }
+        }
+    }  
+}

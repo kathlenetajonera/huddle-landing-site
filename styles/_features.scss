@@ -1,0 +1,110 @@
+.features {
+    background-color: #ffffff;
+    padding: 3rem 1.3rem 0;
+
+    @include mediaQuery(tablet) {
+        padding-top: 8rem;
+    }
+
+    .card {
+        box-shadow: 0 0 1rem 5px #f7f7f7;
+        padding: 2rem;
+        border-radius: 1rem;
+        width: Min(1152px, 100%);
+        margin: 0 auto;
+        
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+
+            @include mediaQuery(tablet) {
+                margin-bottom: 2.5rem;
+                padding: 3rem 2rem;
+            }
+        }
+    }
+
+    .grid-two-col {
+        margin-top: 0;
+
+        .text {
+            order: 1;
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            @include mediaQuery(tablet) {
+                order: 0;
+            }
+
+            @include mediaQuery(desktop) {
+                padding-left: 5rem;
+            }
+        }
+
+        .image {
+            max-width: 90%;
+            margin: 1.5rem auto 0;
+
+            @include mediaQuery(tablet) {
+                order: 1;
+            }
+
+            @include mediaQuery(desktop) {
+                max-width: 70%;
+                margin: 0 0 0 auto;
+            }
+        }
+    }
+
+    .img-first {
+        @include mediaQuery(tablet) {
+            .text {
+                order: 1;
+            }
+
+            .image {
+                order: 0;
+
+                @include mediaQuery(desktop) {
+                    max-width: 90%;
+                    margin: 0 auto 0 0;
+                    padding-left: 5rem;
+                }
+            }
+        }
+    }
+
+    .banner {
+        padding: 2rem 1rem;
+        background-color: $white;
+        border-radius: 1rem;
+        box-shadow: 0 -5px 8px 0 #f7f7f7;
+        text-align: center;
+        transform: translateY(40%);
+        width: Min(720px, 100%);
+        margin: 0 auto;
+
+        h2 {
+            font-size: 1.1rem;
+
+            @include mediaQuery(tablet) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .primary-button {
+            margin-top: 1.5rem;
+            box-shadow: 0 2px 8px 0 #d2d9dc;
+
+            @include mediaQuery(tablet) {
+                max-width: 375px;
+                font-size: $font-normal;
+            }
+        }
+
+        @include mediaQuery(desktop) {
+            padding: 3rem;
+        }
+    }
+}

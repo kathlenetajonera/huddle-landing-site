@@ -1,0 +1,89 @@
+a {
+    font-family: $body-font;
+    text-decoration: none;
+    color: $veryDarkCyan;
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+.primary-button {
+    display: block;
+    background-color: $pink;
+    color: $white;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    text-align: center;
+
+    &:hover {
+        background-color: #ff9bdb;
+    }
+}
+
+h1, h2 {
+    font-family: $heading-font;
+    color: $veryDarkCyan;
+}
+
+p {
+    font-family: $body-font;
+    color: $grayishBlue;
+}
+
+ul {
+    list-style: none;
+
+    li a {
+        text-decoration: none;
+        font-family: $body-font;
+    }
+}
+
+.grid-two-col {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+    margin-top: 4rem;
+    padding: 0 1rem;
+
+    .text {
+        text-align: center;
+
+        @include mediaQuery(tablet) {
+            text-align: left;
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        p {
+            padding: 1rem 0;
+        }
+    }
+
+    .image {
+        img {
+            max-width: 100%;
+        }
+    }
+
+    @include mediaQuery(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}
+
+.attribution {
+    font-family: $body-font;
+    font-size: 11px;
+    font-weight: 400;
+    text-align: center;
+    padding: 1rem;
+
+    a {
+        color: hsl(228, 45%, 44%);
+        font-size: 11px;
+    }
+}

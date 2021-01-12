@@ -1,0 +1,84 @@
+.hero {
+    //min-height: 100vh;
+    padding: 2rem 1rem;
+    background-color: $veryPaleCyan;
+    background-image: url("/images/bg-hero-mobile.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include mediaQuery(tablet) {
+        background-image: url("/images/bg-hero-desktop.svg");
+        padding: 2rem;
+    }
+
+    @include mediaQuery(desktop) {
+        padding: 2rem 4.5rem;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            flex: 1;
+
+            img {
+                width: Min(168px, 50%);
+            }
+        }
+
+        .secondary-button {
+            background-color: $white;
+            padding: .5rem 1.5rem;
+            border-radius: 2rem;
+            box-shadow: 0 0 1rem 0 rgb(221, 234, 240);
+
+            &:hover {
+                color: $grayishBlue;
+            }
+            
+            @include mediaQuery(tablet) {
+                padding: .8rem 4rem;
+            }
+        }
+    }
+
+    .grid-two-col {
+        .text {
+            span {
+                @include mediaQuery(desktop) {
+                    display: block;
+                }
+            }
+
+            p {
+                color: $veryDarkCyan;
+
+                @include mediaQuery(desktop) {
+                    width: 78%;
+                }
+            }
+
+            .primary-button {
+                box-shadow: 0 2px 8px 0 #feb2ea;
+
+                @include mediaQuery(tablet) {
+                    margin: 1rem 0;
+                }
+
+                @include mediaQuery(desktop) {
+                    width: 50%;
+                }
+            }
+        }
+
+        @include mediaQuery(tablet) {
+            padding: 0;
+        }
+
+        @include mediaQuery(desktop) {
+            grid-gap: 0;
+        }
+    }
+}
